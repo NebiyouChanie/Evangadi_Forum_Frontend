@@ -18,7 +18,7 @@ function Askquestion() {
     setError(false);
     
     try {
-      const response = await fetch('http://localhost:5500/questions/ask', {
+      const response = await fetch('https://evangadiforum-backend-ovy7.onrender.com/questions/ask', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
