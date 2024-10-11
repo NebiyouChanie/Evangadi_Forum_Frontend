@@ -19,7 +19,7 @@ function Answers() {
 // post answer
     const postAnswer = async (data) =>{
         try {
-            const response = await fetch(`http://localhost:5500/answers/questions/${questionid}/postanswer`,
+            const response = await fetch(`https://evangadiforum-backend-ovy7.onrender.com/answers/questions/${questionid}/postanswer`,
                 {method:'POST',
                 headers:{
                     'Authorization' :`Bearer ${token}`,
@@ -42,7 +42,7 @@ function Answers() {
     // fetch all answers
     const fetchAnswers = async () => {
         try {
-              const response =  await fetch(`http://localhost:5500/answers/questions/${questionid}/answers`,{
+              const response =  await fetch(`https://evangadiforum-backend-ovy7.onrender.com/answers/questions/${questionid}/answers`,{
                 method:'GET',
                 headers:{
                     'Authorization':`Bearer ${token}`
