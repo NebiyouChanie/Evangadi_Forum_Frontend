@@ -15,7 +15,7 @@ function RegistrationForm() {
   const onSubmit =async (data) => {
     setIsSubmitting(true)
     try {
-      const response = await fetch('http://localhost:5500/users/register',{
+      const response = await fetch('https://evangadiforum-backend-ovy7.onrender.com/users/register',{
        method: 'POST',
        headers: {
         'Content-Type':'application/json'
