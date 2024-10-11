@@ -13,7 +13,7 @@ const token = localStorage.getItem('token');
   const fetchQuestions = async ()=>{
     try {
         
-        const response =  await fetch('http://localhost:5500/questions/all',{
+        const response =  await fetch('https://evangadiforum-backend-ovy7.onrender.com/questions/all',{
             method:'GET',
             headers:{
                 'Authorization':`Bearer ${token}`
