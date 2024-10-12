@@ -33,7 +33,7 @@ function Questions() {
 
     useEffect(() => {
         fetchQuestions();
-    }, []);
+    }, [fetchQuestions]);
 
     return (
         <div>
