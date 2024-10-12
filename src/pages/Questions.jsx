@@ -9,31 +9,32 @@ function Questions() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { user } = useContext(UserContext);
-    const token = localStorage.getItem('token'); 
-
-    const fetchQuestions = async () => {
-        try {
-            const response = await fetch('https://evangadiforum-backend-ovy7.onrender.com/questions/all', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                },
-            });
-            if (!response.ok) {
-                throw new Error('Failed to fetch questions');
-            }
-            const data = await response.json();
-            setQuestions(data.response || []);
-        } catch (error) {
-            setError(error.message);
-        } finally {
-            setLoading(false);
-        }
-    };
+    const token = localStorage.getItem('token');
 
     useEffect(() => {
-        fetchQuestions();
-    }, [fetchQuestions]);
+        const fetchQuestions = async () => {
+            setLoading(true); // Set loading to true before the fetch
+            try {
+                const response = await fetch('https://evangadiforum-backend-ovy7.onrender.com/questions/all', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                    },
+                });
+                if (!response.ok) {
+                    throw new Error('Failed to fetch questions');
+                }
+                const data = await response.json();
+                setQuestions(data.response || []);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);  
+            }
+        };
+
+        fetchQuestions();  
+    }, [token]); 
 
     return (
         <div>
