@@ -9,7 +9,7 @@ function LoginForm() {
     const [serverResponse, setServerResponse] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState(false);
-    const { user, setUser } = useContext(UserContext);
+    const { setUser } = useContext(UserContext);
 
     // This function will be triggered when the form is successfully submitted
     const onSubmit = useCallback(async (data) => {
