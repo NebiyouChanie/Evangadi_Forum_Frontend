@@ -6,6 +6,8 @@ import { UserContext } from '../Usercontext';
 
 function Questions() {
     const [questions, setQuestions] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const { user } = useContext(UserContext);
     const token = localStorage.getItem('token'); 
 
@@ -23,7 +25,9 @@ function Questions() {
             const data = await response.json();
             setQuestions(data.response || []);
         } catch (error) {
-            console.log(error);
+            setError(error.message);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -43,7 +47,11 @@ function Questions() {
             </div>
 
             <div className='px-8 md:px-32 lg:px-[25%]'>
-                {questions.length === 0 ? (
+                {loading ? (
+                    <p className='text-center py-8'>Loading questions...</p>
+                ) : error ? (
+                    <p className='text-center py-8 text-red-600'>{error}</p>
+                ) : questions.length === 0 ? (
                     <p className='text-center py-8'>No questions available.</p>
                 ) : (
                     questions.map((question) => {
