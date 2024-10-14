@@ -117,7 +117,7 @@ function Answers() {
                             })}
                         ></textarea>
                         {errors.answer && <p className="text-red-600 text-center">{errors.answer.message}</p>}
-                        <button type='submit' className='bg-blue-600 text-sm py-2 px-8 rounded-md text-white'>Post Answer</button>
+                        <button type='submit' className='bg-blue-600 text-sm py-2 px-8 rounded-md text-white  hover:bg-blue-500 transition-all ease-in-out duration-200'>Post Answer</button>
                     </form>
                 </div>
             </div>
