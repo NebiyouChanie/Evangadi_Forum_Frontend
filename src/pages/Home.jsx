@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className='min-h-screen flex flex-col'>
       <Nav />
-      <Questions className='flex-grow'/>
+      <Questions />
       <Footer />
     </div>
   )
