@@ -37,7 +37,7 @@ function Questions() {
     }, [token]); 
 
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div>
             <div className='flex justify-between py-12 mx-8 md:px-12 lg:mx-[20%] border-b-2'>
                 <Link to={'/questions/ask'}>
                     <button className='bg-blue-600 text-sm py-2 px-8 rounded-md text-white font-medium'>
@@ -47,7 +47,7 @@ function Questions() {
                 <p>Welcome: <span className='font-semibold'>{user}</span></p>
             </div>
 
-            <div className='px-8 md:px-32 lg:px-[25%] flex-grow'>
+            <div className='px-8 md:px-32 lg:px-[25%]'>
                 {loading ? (
                     <p className='text-center py-8'>Loading questions...</p>
                 ) : error ? (
