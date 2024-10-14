@@ -37,7 +37,7 @@ function Questions() {
     }, [token]); 
 
     return (
-        <div className='flex-grow'>
+        <div>
             <div className='flex justify-between py-12 mx-8 md:px-12 lg:mx-[20%] border-b-2'>
                 <Link to={'/questions/ask'}>
                     <button className='bg-blue-600 text-sm py-2 px-8 rounded-md text-white font-medium'>
