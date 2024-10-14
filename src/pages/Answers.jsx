@@ -34,7 +34,7 @@ function Answers() {
     // Fetch single question details
     const fetchSingleQuestion = useCallback(async () => {
         try {
-            const response = await fetch(`https://evangadiforum-backend-ovy7.onrender.com/answers/questions/${questionid}`, {
+            const response = await fetch(`https://evangadiforum-backend-ovy7.onrender.com/questions${questionid}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
