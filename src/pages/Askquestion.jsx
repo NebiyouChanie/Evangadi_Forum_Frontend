@@ -55,10 +55,9 @@ function Askquestion() {
   }, [serverResponse, error, navigate]);
 
   return (
-    <div>
-      <div className='mb-32'>
+    <div className='min-h-screen flex flex-col>
         <Nav />
-        <div className='mt-8 mx-8 md:px-12 lg:mx-[20%]'>
+        <div className='mt-8 mx-8 md:px-12 lg:mx-[20%] flex-grow'>
           <h1 className='text-xl text-blue-600 font-semibold underline underline-offset-[8px] mb-4'>
             Steps to Write A Good Question.
           </h1>
@@ -131,7 +130,7 @@ function Askquestion() {
             </button>
           </form>
         </div>
-      </div>
+    
       <Footer />
     </div>
   );
