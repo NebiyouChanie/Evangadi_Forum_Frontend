@@ -34,7 +34,7 @@ function Answers() {
     // Fetch single question details
     const fetchSingleQuestion = useCallback(async () => {
         try {
-            const response = await fetch(`http://localhost:5500/questions/${questionid}`, {
+            const response = await fetch(`https://evangadiforum-backend-ovy7.onrender.com/answers/questions/${questionid}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -77,9 +77,9 @@ function Answers() {
     };
 
     return (
-        <div>
+        <div className='min-h-screen flex flex-col' >
             <Nav />
-            <div className='my-8'>
+            <div className='my-8 my-8 flex-grow'>
                 <div className='mx-8 md:px-12 lg:mx-[20%]'>
                     <h1 className='mb-4 text-2xl uppercase'>Question</h1>
                     <h3 className='font-semibold text-2xl text-blue-500 mb-2'>{title}</h3>
