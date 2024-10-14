@@ -59,7 +59,7 @@ function Questions() {
                         const { username, title, questionid } = question;
                         return (
                             <Link to={`/answers/questions/${questionid}/answers`} key={questionid}>
-                                <div className='flex gap-4 justify-between py-8 items-center border-b-2'>
+                                <div className='flex gap-4 justify-between py-8 items-center border-b-2 hover:scale-105 transition-all ease-in-out duration-300'>
                                     <div className='flex flex-col gap-2 items-center'>
                                         <div className='h-10 w-10 border-2 rounded-full overflow-hidden'>
                                             <AccountCircleIcon style={{ height: '100%', width: "100%" }} />
