@@ -4,9 +4,9 @@ import Questions from './Questions'
 import Footer from '../components/Footer'
 function Home() {
   return (
-    <div>
+    <div className='min-h-screen flex flex-col'>
       <Nav />
-      <Questions />
+      <Questions className='flex-grow'/>
       <Footer />
     </div>
   )
