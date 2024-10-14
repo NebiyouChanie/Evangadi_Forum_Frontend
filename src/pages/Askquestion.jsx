@@ -124,7 +124,7 @@ function Askquestion() {
             <button
               type='submit'
               disabled={isSubmitting}
-              className={`py-2 px-8 mt-8 rounded-md text-white ${isSubmitting ? 'bg-blue-600 cursor-not-allowed' : 'bg-blue-800'}`}
+              className={`py-2 px-8 mt-8 hover:bg-blue-500 transition-all ease-in-out duration-200 rounded-md text-white ${isSubmitting ? 'bg-blue-600 cursor-not-allowed' : 'bg-blue-800'}`}
             >
               {isSubmitting ? 'Submitting' : 'Post Question'}
             </button>
