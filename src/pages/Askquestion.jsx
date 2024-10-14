@@ -55,7 +55,7 @@ function Askquestion() {
   }, [serverResponse, error, navigate]);
 
   return (
-    <div className='min-h-screen flex flex-col>
+    <div className='min-h-screen flex flex-col'>
         <Nav />
         <div className='my-16 mx-8 md:px-12 lg:mx-[20%] flex-grow'>
           <h1 className='text-xl text-blue-600 font-semibold underline underline-offset-[8px] mb-4'>
