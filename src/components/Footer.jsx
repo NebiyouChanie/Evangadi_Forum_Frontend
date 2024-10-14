@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
   return (
-    <div className='flex flex-col    md:flex-row md:justify-between w-full px-[10%] py-[5%] bg-gray-700 gap-6'>
+    <div className='flex flex-col    md:flex-row md:justify-between w-full px-[10%] py-10 bg-gray-700 gap-6'>
         <div className='flex flex-col gap-4'>
             <div className='h-6'>
                 <img className='h-full' src={logo} alt="" />
